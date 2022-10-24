@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import ProductItem from "@/components/ProductItem.vue";
+
+const items: number[] = [];
+for (let i = 1; i < 86; i++) {
+  items.push(i);
+}
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <ProductItem v-for="item in items" :key="item" :id="item" />
+  </div>
 </template>
