@@ -2,7 +2,7 @@
 import ProductItem from "@/components/ProductItem.vue";
 
 const items: number[] = [];
-for (let i = 1; i < 86; i++) {
+for (let i = 1; i < 142; i++) {
   items.push(i);
 }
 </script>

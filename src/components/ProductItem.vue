@@ -1,23 +1,25 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
-
+//${props.id}
 const props = defineProps({
   id: Number,
 });
+
+const imageUrl = new URL(`../assets/images/${props.id}.jpeg`, import.meta.url).href;
 const error = ref(false);
 
 function setError() {
-  this.error = true;
+  error.value = true;
 }
 </script>
 <template>
-  <div v-if="!error" style="margin: 1rem">
-    <img    
+  <div style="margin: 1rem">
+    <img
       style="object-fit: cover"
       height="200"
       width="200"
       @error="setError()"
-      :src="`src/assets/images/${id}.jpeg`"
+      :src="imageUrl"
     />
     <div
       style="
