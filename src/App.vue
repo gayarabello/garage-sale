@@ -3,7 +3,9 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <div style="display: flex; justify-content: space-between; align-items: center; background-color;: red">
+  <div
+    style="display: flex; justify-content: space-between; align-items: center"
+  >
     <h1>Loja da Alegria</h1>
     <div>
       <RouterLink style="margin-right: 1rem" to="/">Home</RouterLink>
